@@ -2,9 +2,11 @@
 
 This repository contains these features:
 
-<!-- This part is update automatically by .github/workflows/update-readme.yaml -->
-<!-- START_FEATURE_LIST -->
-<!-- END_FEATURE_LIST -->
+Table of all features:
+
+| Feature | Description |
+|---------|-------------|
+| [Zig ](./src/zig) | Zig from [official releases](https://ziglang.org/download/) or custom url, like [Mach Engine](https://machengine.org/about/nominated-zig/) |
 
 ## Usage
 
@@ -50,8 +52,10 @@ Open this repository in VSCode and opt-in to opening the workspace in a dev cont
 
 - Add the Feature to [.github/workflows/test.yaml](.github/workflows/test.yaml)
 
+- Add it to the _Feature list_ at the top in this README.md
+
 > [!NOTE]
-> The Feature's README.md is generated automatically, and the root's README.md will update automatically with published features.
+> The Feature's README.md is generated automatically.
 
 ## Running tests
 In VSCode open a [terminal](https://code.visualstudio.com/docs/terminal/basics) and execute:
