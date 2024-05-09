@@ -5,12 +5,12 @@ on:
       - main
     paths:
       - src/**/devcontainer-feature.json
-      - src/**/NOTE.md
+      - src/**/NOTES.md
       - .github/workflows/update-features-readme.yaml
   pull_request:
     paths:
       - src/**/devcontainer-feature.json
-      - src/**/NOTE.md
+      - src/**/NOTES.md
       - .github/workflows/update-features-readme.yaml
   workflow_dispatch:
 
