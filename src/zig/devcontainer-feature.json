@@ -13,6 +13,15 @@
             ],
             "default": "latest",
             "description": "Select the Zig version you would like to install"
+        },
+        "indexUrl": {
+            "type": "string",
+            "proposals": [
+                "https://ziglang.org/download/index.json",
+                "https://machengine.org/zig/index.json"
+            ],
+            "default": "https://ziglang.org/download/index.json",
+            "description": "The url to the json containing available versions, should return similiar structure as https://ziglang.org/download/index.json"
         }
     }
 }

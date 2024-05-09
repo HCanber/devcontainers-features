@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 ZIG_VERSION="${VERSION:-"latest"}"
+INDEX_URL="${INDEXURL:-"https://ziglang.org/download/index.json"}"
 
 set -e
 
@@ -33,8 +34,6 @@ rm -rf /usr/local/lib/zig
 
 # make sure /usr/local/lib/zig exists
 mkdir -p /usr/local/lib/zig
-
-INDEX_URL="https://ziglang.org/download/index.json"
 
 if [[ "$ZIG_VERSION" == "latest" || "$ZIG_VERSION" == "current" || "$ZIG_VERSION" == "lts" ]]
 then
