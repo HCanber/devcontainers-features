@@ -1,5 +1,6 @@
 # Dev Container Features
 
+<!-- This part is update automatically by .github/workflows/update-readme.yaml -->
 <!-- START_FEATURE_LIST -->
 <!-- END_FEATURE_LIST -->
 
