@@ -1,22 +1,57 @@
 # Dev Container Features
 
+This repository contains these features:
+
 <!-- This part is update automatically by .github/workflows/update-readme.yaml -->
 <!-- START_FEATURE_LIST -->
 <!-- END_FEATURE_LIST -->
 
+## Usage
 
-# Developing Features
+To reference a Feature from this repository, add the desired Features to a `devcontainer.json`. Each Feature has a `README.md` that shows how to reference the Feature and which options are available for that Feature.
+
+The example below installs the `zig` declared in the [`./src/zig`](./src/zig) directory of this
+repository.
+
+See the relevant Feature's README for supported options.
+
+```jsonc
+"name": "my-project-devcontainer",
+"image": "mcr.microsoft.com/devcontainers/base:ubuntu",  // Any generic, debian-based image.
+"features": {
+    "ghcr.io/hcanber/devcontainers_features/zig": {
+    }
+}
+```
+
+The `:latest` version annotation is added implicitly if omitted. To pin to a specific package version
+([example](https://github.com/devcontainers/features/pkgs/container/features/go/versions)), append it to the end of the
+Feature. Features follow semantic versioning conventions, so you can pin to a major version `:1`, minor version `:1.0`, or patch version `:1.0.0` by specifying the appropriate label.
+
+```jsonc
+"features": {
+    "ghcr.io/devcontainers/features/zig:1.0.0": {
+    }
+}
+```
+
+----
+
+## Adding new Features to this repository
 
 Open this repository in VSCode and opt-in to opening the workspace in a dev container.  This will provide a consistent development environment for all Features.
 
-## Adding a new Feature
-Add a folder under [src/](src/) with the name of the Feature. The folder should contain at least a `devcontainer-feature.json` and an entrypoint script `install.sh`.
+### Adding a new Feature
+- Add a folder under [src/](src/) with the name of the Feature. The folder should contain at least a `devcontainer-feature.json` and an entrypoint script `install.sh`. Note that README.md files are updated automatically. 
+  > [!TIP]
+  > Add a `NOTES.md` as it will be added to the end of the generated README.md
 
-Add a folder under [test/](test/) with the name of the Feature. The folder should contain at least a `scenarios.json` and a test script `test.sh`.
+- Add a folder under [test/](test/) with the name of the Feature. The folder should contain at least a `scenarios.json` and a test script `test.sh`.
 
-Add the Feature to [.github/workflows/test.yaml](.github/workflows/test.yaml)
+- Add the Feature to [.github/workflows/test.yaml](.github/workflows/test.yaml)
 
-Note that README-md files are updated automatically
+> [!NOTE]
+> The Feature's README.md is generated automatically, and the root's README.md will update automatically with published features.
 
 ## Running tests
 In VSCode open a [terminal](https://code.visualstudio.com/docs/terminal/basics) and execute:
