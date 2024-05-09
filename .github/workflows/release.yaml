@@ -19,9 +19,11 @@ jobs:
           publish-features: "true"
           base-path-to-features: "./src"
           generate-docs: "true"
-          
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Update Dev Container collection readme
+        uses: devcontainers-community/update-collection-readme@v1.1.0
 
       - name: Create PR for Documentation
         id: push_image_info
