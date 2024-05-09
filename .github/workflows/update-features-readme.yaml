@@ -28,4 +28,7 @@ jobs:
           base-path-to-features: "./src"
           generate-docs: "true"
 
-      - uses: stefanzweifel/git-auto-commit-action@v4
+      - uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          file_pattern: '**/README.md'
+          commit_message: 'Automatically update README for features'
