@@ -1,0 +1,11 @@
+{
+  "mach-zig": {
+    "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+    "features": {
+      "zig": {
+        "indexUrl": "https://machengine.org/zig/index.json",
+        "version": "2024.3.0-mach"
+      }
+    }
+  }
+}
