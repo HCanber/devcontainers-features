@@ -1,7 +1,13 @@
 name: "Validate devcontainer-feature.json files"
 on:
-  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - src/**/devcontainer-feature.json
+      - .github/workflows/validate.yaml
   pull_request:
+  workflow_dispatch:
 
 jobs:
   validate:
