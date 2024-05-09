@@ -18,12 +18,12 @@ jobs:
         with:
           publish-features: "true"
           base-path-to-features: "./src"
-          generate-docs: "true"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
+      # This gets all features from ghcr.io/<owner>/<repo>:latest and updates the root readme
       - name: Update Dev Container collection readme
-        uses: devcontainers-community/update-collection-readme@v1.1.0
+        uses: devcontainers-community/update-collection-readme@v1
 
       - name: Create PR for Documentation
         id: push_image_info

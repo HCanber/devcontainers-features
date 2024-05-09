@@ -6,12 +6,12 @@ on:
     paths:
       - src/**/devcontainer-feature.json
       - src/**/NOTE.md
-      - .github/workflows/update-readme.yaml
+      - .github/workflows/update-features-readme.yaml
   pull_request:
     paths:
       - src/**/devcontainer-feature.json
       - src/**/NOTE.md
-      - .github/workflows/update-readme.yaml
+      - .github/workflows/update-features-readme.yaml
   workflow_dispatch:
 
 jobs:
@@ -20,14 +20,12 @@ jobs:
       contents: write
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - name: "Update readme for features"
         uses: devcontainers/action@v1
         with:
           base-path-to-features: "./src"
           generate-docs: "true"
-
-      - uses: devcontainers-community/update-collection-readme@v1
 
       - uses: stefanzweifel/git-auto-commit-action@v4
